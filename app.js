@@ -32,6 +32,9 @@ wss.on("connection", function connection(ws) {
 });
 
 const PORT = process.env.PORT || 3000;
+app.get("/", (req, res) => {
+  res.send("Server is running");
+});
 server.listen(PORT, function listening() {
   console.log(`Server listening on port ${PORT}`);
 });
